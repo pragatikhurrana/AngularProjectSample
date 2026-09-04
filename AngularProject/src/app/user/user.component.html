@@ -2,5 +2,5 @@
   <button class="avatar-button" type="button" (click)="onSelectUser()" aria-label="Select user">
     <img class="avatar-image" [src]="imagePath" alt="User Icon" />
   </button>
-  <span class="user-name">{{ name }}</span>
+  <span class="user-name"  (click)="onSelectUser()">{{ name }}</span>
 </div>

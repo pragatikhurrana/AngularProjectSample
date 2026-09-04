@@ -1,22 +1,53 @@
-main {
-  display: flex;
-  justify-content: center;
-  padding: 2.5rem 1.25rem 4rem;
+.dashboard {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.25rem 3rem;
+  align-items: start;
 }
 
-ul {
+.user-panel,
+.tasks-panel {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.user-panel {
+  padding: 1.25rem;
+}
+
+.user-panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1.3rem;
+  color: #1e293b;
+}
+
+.user-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: min(100%, 42rem);
 }
 
-li {
+.user-list li {
   display: flex;
-  justify-content: center;
 }
 
 app-user {
   width: 100%;
   display: block;
+}
+
+.tasks-panel {
+  padding: 1.25rem;
+  min-height: 320px;
+}
+
+@media (max-width: 760px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
 }

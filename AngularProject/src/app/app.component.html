@@ -1,9 +1,20 @@
 <app-header></app-header>
-<main>
-  <ul>
-    <li>
-      <app-user [id]="users[0].id" [avatar]="users[0].avatar" 
-      [name]="users[0].name" (select)="onSelectUser($event)"></app-user>
-    </li>
-  </ul>
+<main class="dashboard">
+  <section class="user-panel">
+    <h2>Selected User</h2>
+    <ul class="user-list">
+      <li *ngFor="let user of users">
+        <app-user
+          [id]="user.id"
+          [avatar]="user.avatar"
+          [name]="user.name"
+          (select)="onSelectUser($event)">
+        </app-user>
+      </li>
+    </ul>
+  </section>
+
+  <section class="tasks-panel">
+    <app-tasks [name]="getSelectedUser()?.name ?? ''"></app-tasks>
+  </section>
 </main>
