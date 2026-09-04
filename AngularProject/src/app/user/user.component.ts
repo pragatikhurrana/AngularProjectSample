@@ -20,13 +20,14 @@ export class UserComponent {
   @Input({required: true}) name!: string;
 
   @Input() id! : number;
-  @Output() select = new EventEmitter();
+  @Output() select = new EventEmitter<number>();
     get imagePath(){
     return 'assets/' + this.avatar;
   }
 
 //   avatar = input.required<string>();
 //   name =input.required<string>();
+// select = output<EventEmitter<number>>(); 
 //   imagePath = computed(() => 'assets/' + this.avatar());
   ///input is a decorator that is used to define an input property for a component. 
   // It allows the parent component to pass data to the child component. 
