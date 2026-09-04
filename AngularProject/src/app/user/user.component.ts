@@ -1,4 +1,4 @@
-import { Component,computed,Input,signal } from '@angular/core';
+import { Component,computed,EventEmitter,input,Input,Output,signal } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -15,19 +15,35 @@ export class UserComponent {
     {name: 'Puran Khurana', avatar: 'user-icon.png'},
     {name: 'Minu Khurana', avatar: 'user-icon.png'}
   ];
-  @Input() avatar!: string;
-  @Input() name!: string;
+  @Input({required: true}) avatar!: string;
+  //required: true is used to indicate that the avatar input property is required and must be provided by the parent component.
+  @Input({required: true}) name!: string;
+
+  @Input() id! : number;
+  @Output() select = new EventEmitter();
     get imagePath(){
     return 'assets/' + this.avatar;
   }
 
+//   avatar = input.required<string>();
+//   name =input.required<string>();
+//   imagePath = computed(() => 'assets/' + this.avatar());
+  ///input is a decorator that is used to define an input property for a component. 
+  // It allows the parent component to pass data to the child component. 
+  // In this case, the avatar input property is defined as a string, and it is used to bind the avatar image source in the template.
+
+
+
   //selectedUser = this.dummyUser[0];
-    //selectedUser = signal(this.dummyUser[0]);
+//selectedUser = signal(this.dummyUser[0]);
 //signal is a new feature in Angular that allows you to create reactive state in your components.
 //It is similar to the useState hook in React. 
 //The signal function takes an initial value and returns a signal object that can be used to read and update the state. 
 // In this case, the selectedUser signal is initialized with the first user in the dummyUser array.
-  //imagePath = computed(() => 'assets/' + this.selectedUser().avatar);
+//imagePath = computed(() => 'assets/' + this.selectedUser().avatar);
+
+
+
 //   get imagePath(){
 //     return 'assets/' + this.selectedUser().avatar;
 //     //this.selectedUser().avatar; getter is used to compute the value of the imagePath property based on the selectedUser signal.
@@ -38,6 +54,7 @@ export class UserComponent {
 //string interpolation is used to display the value of the selectedUser property in the template. The value of selectedUser is set to 'Pragati Khurana' in the component class, and it will be displayed in the template where {{ selectedUser }} is used.
 //property binding is used to bind the image source to the src attribute of the img element. The value of the src attribute is set to 'assets/user-icon.png', which is the path to the user icon image in the assets folder.
 onSelectUser(){
+    this.select.emit(this.id);
 //   const randomIndex = Math.floor(Math.random() *this.dummyUser.length);
 //   this.selectedUser.set(this.dummyUser[randomIndex]);
   //set can be used to update the value of a signal. 

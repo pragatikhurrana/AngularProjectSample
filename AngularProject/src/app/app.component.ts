@@ -12,11 +12,14 @@ import { UserComponent } from './user/user.component';
 })
 export class AppComponent {
     users = [
-    { name: 'Utsav Trehan', avatar: 'user-icon.png'},
-    {name: 'Pragati Khurana', avatar: 'user-icon.png'},
-    {name: 'Sonali Khurana', avatar: 'user-icon.png'},
-    {name: 'Puran Khurana', avatar: 'user-icon.png'},
-    {name: 'Minu Khurana', avatar: 'user-icon.png'}
+    { id: 1, name: 'Utsav Trehan', avatar: 'user-icon.png'},
+    { id: 2, name: 'Pragati Khurana', avatar: 'user-icon.png'},
+    { id: 3, name: 'Sonali Khurana', avatar: 'user-icon.png'},
+    { id: 4, name: 'Puran Khurana', avatar: 'user-icon.png'},
+    { id: 5, name: 'Minu Khurana', avatar: 'user-icon.png'}
   ];
   title = 'AngularProject';
+  onSelectUser(id: number) {
+    console.log('User selected:', id);
+  }
 }
