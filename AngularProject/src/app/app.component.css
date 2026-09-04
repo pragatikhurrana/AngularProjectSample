@@ -1,0 +1,22 @@
+main {
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: min(100%, 42rem);
+}
+
+li {
+  display: flex;
+  justify-content: center;
+}
+
+app-user {
+  width: 100%;
+  display: block;
+}

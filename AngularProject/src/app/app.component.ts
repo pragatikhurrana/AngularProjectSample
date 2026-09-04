@@ -11,5 +11,12 @@ import { UserComponent } from './user/user.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+    users = [
+    { name: 'Utsav Trehan', avatar: 'user-icon.png'},
+    {name: 'Pragati Khurana', avatar: 'user-icon.png'},
+    {name: 'Sonali Khurana', avatar: 'user-icon.png'},
+    {name: 'Puran Khurana', avatar: 'user-icon.png'},
+    {name: 'Minu Khurana', avatar: 'user-icon.png'}
+  ];
   title = 'AngularProject';
 }
