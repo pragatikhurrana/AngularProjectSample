@@ -14,11 +14,23 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
     users = [
-    { id: 1, name: 'Utsav Trehan', avatar: 'user-icon.png'},
-    { id: 2, name: 'Pragati Khurana', avatar: 'user-icon.png'},
-    { id: 3, name: 'Sonali Khurana', avatar: 'user-icon.png'},
-    { id: 4, name: 'Puran Khurana', avatar: 'user-icon.png'},
-    { id: 5, name: 'Minu Khurana', avatar: 'user-icon.png'}
+    { id: 1, name: 'Utsav Trehan', avatar: 'user-icon.png', tasks: [
+      { description: 'Complete project documentation', status: 'completed' },
+      { description: 'Fix login page bug', status: 'in-progress' },
+      { description: 'Update user profile feature', status: 'pending' }
+    ]},
+    { id: 2, name: 'Pragati Khurana', avatar: 'user-icon.png', tasks: [{ description: 'Design new landing page', status: 'in-progress' },
+      { description: 'Implement search functionality', status: 'pending' }
+    ]},
+    { id: 3, name: 'Sonali Khurana', avatar: 'user-icon.png', tasks: [{ description: 'Conduct user testing', status: 'completed' },
+      { description: 'Optimize database queries', status: 'in-progress' }
+      ]},
+    { id: 4, name: 'Puran Khurana', avatar: 'user-icon.png', tasks: [{ description: 'Refactor codebase', status: 'pending' },
+      { description: 'Implement caching mechanism', status: 'in-progress' }
+    ]},
+    { id: 5, name: 'Minu Khurana', avatar: 'user-icon.png', tasks: [{ description: 'Set up CI/CD pipeline', status: 'completed' },
+      { description: 'Write unit tests', status: 'in-progress' }
+    ]}
   ];
   title = 'AngularProject';
   selectedUserId: number = 1;

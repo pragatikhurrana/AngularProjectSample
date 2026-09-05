@@ -5,7 +5,12 @@
   </div>
 
   <ul class="task-list">
-    <li class="task-item">
+    @for(task of tasks; track task.description){
+      <li class="task-item">
+        <app-task [status]="task.status" [description]="task.description"></app-task>
+      </li>
+    }
+    <!-- <li class="task-item">
       <span class="task-status done"></span>
       <span>Review Angular assignment</span>
     </li>
@@ -16,6 +21,6 @@
     <li class="task-item">
       <span class="task-status progress"></span>
       <span>Refine dashboard styling</span>
-    </li>
+    </li> -->
   </ul>
 </div>

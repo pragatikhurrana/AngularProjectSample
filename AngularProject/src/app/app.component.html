@@ -1,8 +1,39 @@
 <app-header></app-header>
 <main class="dashboard">
   <section class="user-panel">
-    <h2>Selected User</h2>
+    <h2>Users List</h2>
     <ul class="user-list">
+      <!-- @for(user of users; track user.id){
+         <li>
+        <app-user
+          [id]="user.id"
+          [avatar]="user.avatar"
+          [name]="user.name"
+          (select)="onSelectUser($event)">
+        </app-user> 
+      </li>
+      } -->
+
+      <!-- @if(selectedUserId){
+        <li *ngFor="let user of users">
+          <app-user
+            [id]="user.id"
+            [avatar]="user.avatar"
+            [name]="user.name"
+            (select)="onSelectUser($event)">
+          </app-user>
+        </li>
+      } @else {
+        <li *ngFor="let user of users">
+          <app-user
+            [id]="user.id"
+            [avatar]="user.avatar"
+            [name]="user.name"
+            (select)="onSelectUser($event)">
+          </app-user>
+        </li>
+      } -->
+
       <li *ngFor="let user of users">
         <app-user
           [id]="user.id"
@@ -15,6 +46,6 @@
   </section>
 
   <section class="tasks-panel">
-    <app-tasks [name]="getSelectedUser()?.name ?? ''"></app-tasks>
+    <app-tasks [tasks]="getSelectedUser()?.tasks ?? []" [name]="getSelectedUser()?.name ?? ''"></app-tasks>
   </section>
 </main>

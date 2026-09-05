@@ -43,7 +43,7 @@ app-user {
 
 .tasks-panel {
   padding: 1.25rem;
-  min-height: 320px;
+  min-height: 585gopx;
 }
 
 @media (max-width: 760px) {
