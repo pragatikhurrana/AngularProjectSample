@@ -1,0 +1,38 @@
+.task {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.completed {
+  color: green;
+  font-weight: bold;
+}
+span.task-description {
+  flex: 1;
+}
+span.task-status {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+}
+span.task-status.pending {
+  background-color: #f0ad4e;
+  color: white;
+}
+span.task-status.completed {
+  background-color: #5cb85c;
+  color: white;
+}
+span.checkmark {
+  font-size: 1.2rem;
+  color: rgb(22, 21, 21);
+}
+
+span.task-status.in-progress {
+  background-color: #5bc0de;
+  color: white;
+}

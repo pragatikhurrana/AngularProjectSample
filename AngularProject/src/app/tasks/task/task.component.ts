@@ -10,4 +10,8 @@ import { Component, Input } from '@angular/core';
 export class TaskComponent {
   @Input({required: true}) description!: string;
   @Input({required: true}) status!: string;
+
+  onMarkAsCompleted() {
+    this.status = 'completed';
+  }
 }

@@ -19,21 +19,27 @@ export class AppComponent {
       { description: 'Fix login page bug', status: 'in-progress' },
       { description: 'Update user profile feature', status: 'pending' }
     ]},
-    { id: 2, name: 'Pragati Khurana', avatar: 'user-icon.png', tasks: [{ description: 'Design new landing page', status: 'in-progress' },
+    { id: 2, name: 'Pragati Khurana', avatar: 'user-icon.png', tasks: [
+      { description: 'Design new landing page', status: 'in-progress' },
       { description: 'Implement search functionality', status: 'pending' }
     ]},
-    { id: 3, name: 'Sonali Khurana', avatar: 'user-icon.png', tasks: [{ description: 'Conduct user testing', status: 'completed' },
+    { id: 3, name: 'Sonali Khurana', avatar: 'user-icon.png', tasks: [
+      { description: 'Conduct user testing', status: 'completed' },
       { description: 'Optimize database queries', status: 'in-progress' }
       ]},
-    { id: 4, name: 'Puran Khurana', avatar: 'user-icon.png', tasks: [{ description: 'Refactor codebase', status: 'pending' },
+    { id: 4, name: 'Puran Khurana', avatar: 'user-icon.png', tasks: [
+      { description: 'Refactor codebase', status: 'pending' },
       { description: 'Implement caching mechanism', status: 'in-progress' }
     ]},
-    { id: 5, name: 'Minu Khurana', avatar: 'user-icon.png', tasks: [{ description: 'Set up CI/CD pipeline', status: 'completed' },
+    { id: 5, name: 'Minu Khurana', avatar: 'user-icon.png', tasks: [
+      { description: 'Set up CI/CD pipeline', status: 'completed' },
       { description: 'Write unit tests', status: 'in-progress' }
     ]}
   ];
+
   title = 'AngularProject';
   selectedUserId: number = 1;
+  
   onSelectUser(id: number) {
     console.log('User selected:', id);
     this.selectedUserId = id;

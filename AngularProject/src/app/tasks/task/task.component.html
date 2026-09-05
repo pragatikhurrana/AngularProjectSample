@@ -1,4 +1,10 @@
 <div class="task">
-  <span class="task-status" [class]="status"></span>
+  
   <span class="task-description">{{ description }}</span>
+
+  <span class="task-status" [class]="status">{{ status }}</span>
+  
+  <button class="completed" type="button" (click)="onMarkAsCompleted()" aria-label="Mark as completed">
+    <span class="checkmark">&#10003;</span>
+  </button>
 </div>
